@@ -1,0 +1,23 @@
+id = "maaalo.herdr-markmap-spike"
+name = "Mind Map Spike"
+version = "0.0.1"
+min_herdr_version = "0.8.0"
+description = "Step 6 spike: dump plugin context and events to the state dir"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "dump"
+title = "Spike: dump plugin context"
+command = ["bash", "dump.sh", "action"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["bash", "dump.sh", "agent_status_changed"]
+
+[[events]]
+on = "pane.agent_detected"
+command = ["bash", "dump.sh", "agent_detected"]
+
+[[events]]
+on = "pane.updated"
+command = ["bash", "dump.sh", "pane_updated"]

@@ -1,0 +1,56 @@
+id = "maaalo.herdr-markmap"
+name = "Mind Map"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Live Markmap mind map of a Claude Code agent's conversation, merged after every turn without touching the agent's context"
+platforms = ["linux", "macos"]
+
+# Build runs on `herdr plugin install` (GitHub). The runtime needs only the Python standard library,
+# so the build just creates the interpreter the commands below use. For `herdr plugin link`, run
+# `python3 -m venv .venv` yourself (tests additionally need `pip install -r requirements.txt`).
+[[build]]
+command = ["python3", "-m", "venv", ".venv"]
+
+# Run from the pane that hosts the agent you want to map.
+[[actions]]
+id = "start"
+title = "Mind map: watch this agent"
+contexts = ["pane"]
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "start"]
+
+[[actions]]
+id = "stop"
+title = "Mind map: stop watching this agent"
+contexts = ["pane"]
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "stop"]
+
+[[actions]]
+id = "toggle"
+title = "Mind map: toggle watching this agent"
+contexts = ["pane"]
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "toggle"]
+
+[[actions]]
+id = "open-preview"
+title = "Mind map: open preview in browser"
+contexts = ["pane"]
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "open-preview"]
+
+[[actions]]
+id = "status"
+title = "Mind map: show watched agents"
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "status"]
+
+# Merge new turns when a watched agent becomes idle or done.
+[[events]]
+on = "pane.agent_status_changed"
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "on-status"]
+
+# The live preview (markmap -w) runs as a background process started by the start action; a
+# $mindmap sidebar token marks watched agents. Add it to your Herdr config to see it:
+#   [ui.sidebar.agents]
+#   rows = [["state_icon", "workspace", "tab"], ["agent", "$mindmap"]]
+
+# Restart preview servers and re-report sidebar tokens after Herdr restores a session.
+[[startup]]
+command = [".venv/bin/python", "-m", "markmap_pipeline.plugin", "restore"]

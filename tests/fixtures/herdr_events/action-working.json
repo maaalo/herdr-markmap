@@ -1,0 +1,29 @@
+{
+  "env": {
+    "HERDR_BIN_PATH": "/opt/homebrew/bin/herdr",
+    "HERDR_ENV": "1",
+    "HERDR_PANE_ID": "w5:p1",
+    "HERDR_PLUGIN_ACTION_ID": "dump",
+    "HERDR_PLUGIN_CONFIG_DIR": "/Users/x/.config/herdr/plugins/config/maaalo.herdr-markmap-spike",
+    "HERDR_PLUGIN_ID": "maaalo.herdr-markmap-spike",
+    "HERDR_PLUGIN_ROOT": "/Users/x/Documents/git/herdr-markmap/spike/event-dump",
+    "HERDR_PLUGIN_STATE_DIR": "/Users/x/.local/state/herdr/plugins/maaalo.herdr-markmap-spike",
+    "HERDR_SOCKET_PATH": "/Users/x/.config/herdr/herdr.sock",
+    "HERDR_TAB_ID": "w5:t1",
+    "HERDR_WORKSPACE_ID": "w5"
+  },
+  "context": {
+    "workspace_id": "w5",
+    "workspace_label": "herdr-markmap",
+    "workspace_cwd": "/Users/x/git/herdr-markmap",
+    "tab_id": "w5:t1",
+    "tab_label": "1",
+    "focused_pane_id": "w5:p1",
+    "focused_pane_cwd": "/Users/x/git/herdr-markmap",
+    "focused_pane_agent": "claude",
+    "focused_pane_status": "working",
+    "invocation_source": "cli",
+    "correlation_id": "cli:plugin"
+  },
+  "event": null
+}

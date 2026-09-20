@@ -1,0 +1,18 @@
+{"type":"mode","mode":"normal","sessionId":"sess-1"}
+{"parentUuid":null,"isSidechain":false,"type":"user","message":{"role":"user","content":"最初の質問です。"},"uuid":"u1","timestamp":"2026-09-18T05:57:04.899Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"u1","isSidechain":false,"attachment":{"type":"environment","snapshot":{}},"uuid":"att1","timestamp":"2026-09-18T05:57:04.900Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"type":"last-prompt","lastPrompt":"最初の質問です。","leafUuid":"u1","sessionId":"sess-1"}
+{"parentUuid":"u1","isSidechain":false,"message":{"id":"msg_1","role":"assistant","content":[{"type":"text","text":"まず状況を確認します。"}]},"type":"assistant","uuid":"a1","timestamp":"2026-09-18T05:57:08.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"a1","isSidechain":false,"message":{"id":"msg_1","role":"assistant","content":[{"type":"tool_use","id":"toolu_1","name":"Bash","input":{"command":"ls"}}]},"type":"assistant","uuid":"a2","timestamp":"2026-09-18T05:57:08.100Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"a2","isSidechain":false,"type":"user","message":{"role":"user","content":[{"tool_use_id":"toolu_1","type":"tool_result","content":"file.txt"}]},"uuid":"u2","timestamp":"2026-09-18T05:57:09.000Z","toolUseResult":{"stdout":"file.txt"},"cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"u2","isSidechain":false,"message":{"id":"msg_2","role":"assistant","content":[{"type":"thinking","thinking":"secret","signature":"x"}]},"type":"assistant","uuid":"a3","timestamp":"2026-09-18T05:57:10.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"a3","isSidechain":false,"message":{"id":"msg_2","role":"assistant","content":[{"type":"text","text":"確認しました。"}]},"type":"assistant","uuid":"a4","timestamp":"2026-09-18T05:57:11.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"a4","isSidechain":false,"message":{"id":"msg_2","role":"assistant","content":[{"type":"text","text":"結論は以下です。"}]},"type":"assistant","uuid":"a5","timestamp":"2026-09-18T05:57:11.500Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"a5","isSidechain":false,"type":"system","subtype":"turn_duration","durationMs":100,"uuid":"s1","timestamp":"2026-09-18T05:57:12.000Z","isMeta":false}
+{"parentUuid":"a5","isSidechain":false,"type":"user","isMeta":true,"message":{"role":"user","content":"メタ情報なので除外"},"uuid":"u3","timestamp":"2026-09-18T05:58:00.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"u3","isSidechain":false,"type":"user","message":{"role":"user","content":"<command-name>/clear</command-name>\n<command-message>clear</command-message>"},"uuid":"u4","timestamp":"2026-09-18T05:58:01.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":null,"isSidechain":true,"type":"user","message":{"role":"user","content":"サブエージェントへの指示"},"uuid":"u5","timestamp":"2026-09-18T05:58:02.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+{"parentUuid":"u5","isSidechain":true,"message":{"id":"msg_side","role":"assistant","content":[{"type":"text","text":"サブエージェントの返答"}]},"type":"assistant","uuid":"a6","timestamp":"2026-09-18T05:58:03.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}
+this line is not json
+
+{"parentUuid":"a5","isSidechain":false,"type":"user","message":{"role":"user","content":"二番目の質問です。"},"uuid":"u6","timestamp":"2026-09-18T05:59:00.000Z","cwd":"/tmp/proj","sessionId":"sess-1"}

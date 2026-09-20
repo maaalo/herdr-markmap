@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mindmap/
+
+# Local design notes (Japanese), kept out of the public repository
+CLAUDE.md
+PLAN.md
